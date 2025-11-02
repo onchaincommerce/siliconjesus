@@ -15,6 +15,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Silicon Jesus - Jesus was a chip manufacturer",
   description: "Handcrafted electronics and curated merch. Silicon is holy.",
+  icons: {
+    icon: '/siliconjesus_logo.png',
+    apple: '/siliconjesus_logo.png',
+  },
+  other: {
+    'google': 'notranslate',
+  },
 };
 
 export default function RootLayout({
@@ -23,7 +30,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" translate="no">
+      <head>
+        <meta name="google" content="notranslate" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
