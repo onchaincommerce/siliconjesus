@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   const taglines = [
@@ -252,7 +253,13 @@ export default function Home() {
       </div>
 
       {/* Copyright */}
-      <div className="text-center">
+      <div className="text-center space-y-2">
+        <Link 
+          href="/table" 
+          className="text-xs opacity-30 hover:opacity-70 transition-opacity cursor-pointer block"
+        >
+          tile table
+        </Link>
         <p className="text-xs opacity-50">
           © 2025 Silicon Jesus
         </p>

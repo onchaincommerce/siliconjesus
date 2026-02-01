@@ -91,9 +91,14 @@ export default function Shop() {
     <div className="min-h-screen bg-black text-white p-8">
       {/* Header */}
       <div className="max-w-7xl mx-auto mb-12">
-        <Link href="/" className="inline-flex items-center text-sm opacity-70 hover:opacity-100 transition-opacity mb-8">
-          ← Back to the void
-        </Link>
+        <div className="flex justify-between items-center mb-8">
+          <Link href="/" className="inline-flex items-center text-sm opacity-70 hover:opacity-100 transition-opacity">
+            ← Back to the void
+          </Link>
+          <Link href="/table" className="inline-flex items-center text-sm opacity-70 hover:opacity-100 transition-opacity">
+            Tile Table →
+          </Link>
+        </div>
         
         <h1 className="text-4xl md:text-6xl boxy-title mb-4">
           THE VAULT
