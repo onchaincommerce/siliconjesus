@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import VibeProgress from "./components/VibeProgress";
+import HamburgerMenu from "./components/HamburgerMenu";
+import BitcoinTicker from "./components/BitcoinTicker";
+import LudicrousMode from "./components/LudicrousMode";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,15 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Silicon Jesus - Jesus was a chip manufacturer",
-  description: "Handcrafted electronics and curated merch. Silicon is holy.",
-  icons: {
-    icon: '/siliconjesus_logo.png',
-    apple: '/siliconjesus_logo.png',
-  },
-  other: {
-    'google': 'notranslate',
-  },
+  title: "Vibe Drive",
+  description: "The Future of Motion",
 };
 
 export default function RootLayout({
@@ -30,14 +27,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" translate="no">
-      <head>
-        <meta name="google" content="notranslate" />
-      </head>
+    <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased pt-12`}
       >
+        <BitcoinTicker />
+        <HamburgerMenu />
         {children}
+        <VibeProgress />
+        <LudicrousMode />
       </body>
     </html>
   );
