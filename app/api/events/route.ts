@@ -48,7 +48,6 @@ export async function GET() {
     console.log("[SSE Proxy] Connecting to:", eventsUrl);
     const response = await fetch(url, {
       headers,
-      // @ts-expect-error - Node.js fetch supports this for streaming
       cache: "no-store",
     });
 
